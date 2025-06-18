@@ -1,0 +1,1 @@
+Esta plataforma se desarrollo en el marco de trabajo final para la materia ESI de la carrera analisis de sistema y desarrollo de software y pretende dar visibilidad a las cuestiones de genero e inclusion dentro del entorno laboral.
