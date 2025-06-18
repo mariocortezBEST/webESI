@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-3">Bienvenido a EquiCorp</h2>
+    <p class="lead">Tu capacitación en diversidad comienza ahora.</p>
+
+    <h5>Progreso del curso:</h5>
+    <div class="progress mb-3">
+      <div id="barraProgreso" class="progress-bar" role="progressbar" style="width: 0%">
+        0%
+      </div>
+    </div>
+
+    <ul class="list-group mb-4">
+      <li class="list-group-item">
+        Módulo 1: Pedagogía del aborto
+        <a href="modulo1.html" class="btn btn-sm btn-primary float-right">Ir al módulo</a>
+      </li>
+      <li class="list-group-item">
+        Módulo 2: Diversidad sexual y género
+        <a href="modulo2.html" class="btn btn-sm btn-primary float-right">Ir al módulo</a>
+      </li>
+      <li class="list-group-item">
+        Módulo 3: Imaginario social y poder
+        <a href="modulo3.html" class="btn btn-sm btn-primary float-right">Ir al módulo</a>
+      </li>
+    </ul>
+
+    <!-- Botón al certificado (oculto hasta cumplir condición) -->
+    <div id="certificadoLink" class="text-center mt-4" style="display: none;">
+      <a href="certificado.html" class="btn btn-success">
+        🎓 Descargar certificado de finalización
+      </a>
+    </div>
+
+    <div class="text-right mt-4">
+      <button onclick="cerrarSesion()" class="btn btn-danger">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <script>
+    // Validar sesión activa
+    if (localStorage.getItem('sesionIniciada') !== 'true') {
+      window.location.href = 'index.html';
+    }
+
+    function cerrarSesion() {
+      localStorage.removeItem('sesionIniciada');
+      window.location.href = 'index.html';
+    }
+
+    // Cálculo de progreso
+    const completado1 = localStorage.getItem('modulo1_completado') === 'true' ? 1 : 0;
+    const completado2 = localStorage.getItem('modulo2_completado') === 'true' ? 1 : 0;
+    const completado3 = localStorage.getItem('modulo3_completado') === 'true' ? 1 : 0;
+    const total = 3;
+    const porcentaje = Math.round(((completado1 + completado2 + completado3) / total) * 100);
+
+    // Actualizar barra
+    const barra = document.getElementById('barraProgreso');
+    barra.style.width = porcentaje + '%';
+    barra.textContent = porcentaje + '% completado';
+
+    // Mostrar botón de certificado solo si se completaron los 3 módulos
+    if (completado1 && completado2 && completado3) {
+      document.getElementById('certificadoLink').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
