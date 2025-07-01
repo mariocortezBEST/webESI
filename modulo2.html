@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Módulo 2 - Diversidad sexual</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Módulo 2: Diversidad sexual y género</h2>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <p>
+          En este módulo exploramos los conceptos fundamentales sobre diversidad sexual. 
+          El sexo biológico hace referencia a características físicas al nacer (genitales, cromosomas, hormonas). 
+          El género, en cambio, es una construcción social, cultural e histórica.
+        </p>
+        <p>
+          La <strong>identidad de género</strong> es cómo una persona se siente respecto a su género (hombre, mujer, no binario, etc.), y puede coincidir o no con su sexo asignado al nacer. Cuando no coincide, hablamos de personas transgénero. Cuando coincide, cisgénero.
+        </p>
+        <p>
+          La <strong>orientación sexual</strong> se refiere a la atracción emocional, afectiva o sexual hacia otras personas (heterosexual, homosexual, bisexual, etc.). Ninguna de estas características define el valor de una persona. 
+        </p>
+        <p>
+          La inclusión empieza por el respeto a la diversidad y la comprensión de que no hay una única forma válida de vivir la sexualidad o el género.
+        </p>
+      </div>
+    </div>
+
+    <h4>Evaluación rápida</h4>
+    <form id="quizForm">
+      <div class="form-group">
+        <label>1. ¿Qué diferencia al género del sexo?</label>
+        <select class="form-control" id="q1">
+          <option value="">Seleccionar</option>
+          <option value="a">El género es biológico</option>
+          <option value="b">El sexo es social, el género es físico</option>
+          <option value="c">El género es una construcción social</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>2. Una persona transgénero es aquella que...</label>
+        <select class="form-control" id="q2">
+          <option value="">Seleccionar</option>
+          <option value="a">No se siente identificada con el género asignado al nacer</option>
+          <option value="b">Tiene orientación sexual indefinida</option>
+          <option value="c">No expresa emociones</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>3. ¿Qué es la orientación sexual?</label>
+        <select class="form-control" id="q3">
+          <option value="">Seleccionar</option>
+          <option value="a">Una conducta criminal</option>
+          <option value="b">La forma en que una persona se identifica corporalmente</option>
+          <option value="c">La atracción hacia otros géneros</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+    </form>
+
+    <div id="resultado" class="mt-4"></div>
+
+    <a href="dashboard.html" class="btn btn-link mt-3">Volver al panel</a>
+  </div>
+
+  <script src="js/modulo2.js"></script>
+</body>
+</html>

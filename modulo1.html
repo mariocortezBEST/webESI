@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Módulo 1 - Pedagogía del aborto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Módulo 1: ¿Qué opina del aborto, profe?</h2>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <p>
+          Este módulo se basa en el ensayo de Manuel Becerra publicado en Revista Anfibia. Aborda cómo la escuela lidia con temas como el aborto, la maternidad adolescente y la exclusión educativa.
+        </p>
+        <p>
+          La escuela no puede ser ajena a los problemas sociales. Las chicas embarazadas no son excepciones, son parte de una realidad que debe abordarse pedagógicamente, sin tabúes.
+        </p>
+        <p>
+          La <strong>pedagogía de la pregunta</strong> propone que la educación debe partir de las inquietudes reales de los estudiantes. Frente a preguntas como “¿usted qué opina del aborto?”, el docente no debe esquivar, sino guiar, contextualizar, debatir.
+        </p>
+        <p>
+          La ilegalidad del aborto afecta principalmente a las adolescentes pobres, que muchas veces deben elegir entre ser madres o seguir estudiando. La escuela debe dar respuestas, no castigos.
+        </p>
+      </div>
+    </div>
+
+    <h4>Evaluación rápida</h4>
+    <form id="quizForm">
+      <div class="form-group">
+        <label>1. ¿Cuál es el enfoque central propuesto por Becerra?</label>
+        <select class="form-control" id="q1">
+          <option value="">Seleccionar</option>
+          <option value="a">Evitar hablar de aborto</option>
+          <option value="b">Aplicar pedagogía del castigo</option>
+          <option value="c">Promover la pedagogía de la pregunta</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>2. ¿Qué sector social es más vulnerable ante la ilegalidad del aborto?</label>
+        <select class="form-control" id="q2">
+          <option value="">Seleccionar</option>
+          <option value="a">Estudiantes de clase media</option>
+          <option value="b">Adolescentes pobres</option>
+          <option value="c">Docentes y directivos</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>3. ¿Cuál debería ser el rol de la escuela frente a estos temas?</label>
+        <select class="form-control" id="q3">
+          <option value="">Seleccionar</option>
+          <option value="a">Esconderlos para evitar polémicas</option>
+          <option value="b">Tratarlos con empatía y sentido pedagógico</option>
+          <option value="c">Derivar todo a los padres</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+    </form>
+
+    <div id="resultado" class="mt-4"></div>
+
+    <a href="dashboard.html" class="btn btn-link mt-3">Volver al panel</a>
+  </div>
+
+  <script src="js/modulo1.js"></script>
+</body>
+</html>
