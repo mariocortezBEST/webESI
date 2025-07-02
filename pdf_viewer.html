@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marco legal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <style>
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-3">
+    <h4>📄 Visualización del Marco Legal</h4>
+    <p>A continuación se muestra el documento PDF correspondiente al fundamento de la capacitación.</p>
+
+    <!-- Visualizador PDF -->
+    <iframe src="assets/ESIenArgentina_RESUMEN.pdf"></iframe>
+
+    <!-- Botón de regreso -->
+    <div class="text-center mt-3">
+      <a href="dashboard.html" class="btn btn-secondary">← Volver al Panel</a>
+    </div>
+  </div>
+
+  <script>
+    // Validar sesión
+    if (localStorage.getItem('sesionIniciada') !== 'true') {
+      alert("Primero debés iniciar sesión.");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
