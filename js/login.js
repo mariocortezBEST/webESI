@@ -7,7 +7,8 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   
     if (savedUser && savedUser.email === email && savedUser.password === password) {
       localStorage.setItem('sesionIniciada', 'true');
-      window.location.href = 'dashboard.html';
+      window.location.href = "pdf_viewer.html";
+
     } else {
       alert('Credenciales incorrectas.');
     }
